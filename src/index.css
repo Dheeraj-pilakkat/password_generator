@@ -30,21 +30,22 @@ margin-top: 10px;
 .password{
   background-color:#0a2048;
   padding: 5px;
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
-  justify-content: center;
+  justify-content:center;
   margin-bottom: 10px;
 }
 .password p{
   color: #3e98e6;
 }
 button{
-  background-color: #0a2048;
+  background-color: #10429f;
   border: none;
   padding: 10px;
   border-radius: 10px;
   margin-top: 20px;
 }
+
 .form-group{
   margin-top: 10px;
 }

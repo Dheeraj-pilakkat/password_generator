@@ -1,6 +1,4 @@
-import { useState } from "react";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/ReactToastify.css";
+import { useEffect, useState } from "react";
 function App() {
   const [password, setPassword] = useState("");
   const [length, setLength] = useState(25);
@@ -49,26 +47,11 @@ function App() {
   };
   const notify = (message, hasError = false) => {
     if (hasError) {
-      toast.error(message, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-    }
-    else {
-      toast(message, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+    alert(message)
+  }
+  else {
+      alert(message)
+   
     }
 
   }
@@ -88,8 +71,8 @@ function App() {
       <section className="container">
         <div className="password">
           <p>{password}</p>
-          <button type="button" onClick={CopyPassword}>
-            Paste
+          <button type="button" onClick={CopyPassword} className="btn ">
+            copy
           </button>
         </div>
         <div className="form-group">
@@ -147,17 +130,6 @@ function App() {
           <button type="button" onClick={passwordGenerator}>
             Generate
           </button>
-          <ToastContainer
-            position="top-center"
-            autoClose={5000}
-            hideProgressBar={true}
-            newestOnTop={true}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-          />
 
       </section>
     </div>
